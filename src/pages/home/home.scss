@@ -1,3 +1,45 @@
 page-home {
+  .code-input {
 
+
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+
+    font-size: 2.5em;
+    span {
+      display: block;
+      padding: 0.3em;
+
+      font-weight: bold;
+      color: map-get($colors, secondary);
+    }
+
+    .corps{
+      background-color: map-get($colors, primary);
+    }
+
+    .arrow{
+
+      background-color: #8c8c8c;
+      ion-icon{
+
+        color: white;
+      }
+    }
+  }
+
+  .code {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .picto{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+   height: 5em;
+    background-color: #672882;
+    border-radius: 50%;
+  }
 }

@@ -1,14 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <img height="40px" src="assets/imgs/logo-blanc.png">
+        <ion-buttons end>
+            <button ion-button icon-only navPush="BluetoothPage">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <h1 text-center>Escape Game #maker</h1>
+    <div text-center class="code">
+        <div class="code-input">
+            <div class="arrow" (click)="add('0')">
+                <ion-icon name="arrow-round-up"></ion-icon>
+            </div>
+            <div class="corps">
+                <span>{{ data[0] }}</span>
+            </div>
+            <div class="arrow" (click)="remove('0')">
+                <ion-icon name="arrow-round-down"></ion-icon>
+            </div>
+        </div>
+        <div class="code-input">
+            <div class="arrow" (click)="add('1')">
+                <ion-icon name="arrow-round-up"></ion-icon>
+            </div>
+            <div class="corps">
+                <span>{{ data[1] }}</span>
+            </div>
+            <div class="arrow" (click)="remove('1')">
+                <ion-icon name="arrow-round-down"></ion-icon>
+            </div>
+        </div>
+        <div class="code-input">
+            <div class="arrow" (click)="add('2')">
+                <ion-icon name="arrow-round-up"></ion-icon>
+            </div>
+            <div class="corps">
+                <span>{{ data[2] }}</span>
+            </div>
+            <div class="arrow" (click)="remove('2')">
+                <ion-icon name="arrow-round-down"></ion-icon>
+            </div>
+        </div>
+        <div class="code-input">
+            <div class="arrow" (click)="add('3')">
+                <ion-icon name="arrow-round-up"></ion-icon>
+            </div>
+            <div class="corps">
+                <span>{{ data[3] }}</span>
+            </div>
+            <div class="arrow" (click)="remove('3')">
+                <ion-icon name="arrow-round-down"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <h2 text-center>Entrez les 4 chiffres !</h2>
+    <img class="picto" src="assets/imgs/lumière.svg">
+    <div text-center margin-top="5em">
+        <button center color="secondary" ion-button (click)="sendData()">Ouvrir le coffre</button>
+    </div>
 </ion-content>
+

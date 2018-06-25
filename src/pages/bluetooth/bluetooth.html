@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Paramètres Bluetooth</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div text-center *ngIf="!isBluetoothActive">
+        <button color="secondary" ion-button (click)="enableBluetooth()">Activer le Bluetooth</button>
+    </div>
+    <div *ngIf="isBluetoothActive">
+        <div text-center>
+            <small>Recherchez les périphériques et sélectionnez ESCAPE GAME #maker</small>
+            <small>Si le périphérique n'apparait pas, assurez vous qu'il soit appairé avec votre appareil (PIN :0000)</small>
+            <button ion-button (click)="search()">Rechercher les périphériques</button>
+            <h2>Périphériques associés</h2>
+        </div>
+        <ion-list *ngFor="let device of pairedDevices">
+            <button ion-item (click)="connect(device)">{{ device.name }}</button>
+        </ion-list>
+    </div>
+</ion-content>
